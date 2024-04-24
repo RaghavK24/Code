@@ -97,7 +97,7 @@ def send_monthly_report():
         msg = MIMEMultipart()
         msg["From"] = SENDER_ADDRESS
         msg["To"] = user["email"]
-        msg["Subject"] = "[Butti] User Monthly Report"
+        msg["Subject"] = "[ZenLibrary] User Monthly Report"
 
         template = render_template("user_report.html", user=user["username"], requests=requests, issues=issues)
         msg.attach(MIMEText(template, "html"))
